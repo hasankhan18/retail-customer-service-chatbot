@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#12392f" />
+    <meta
+      name="description"
+      content="RetailCare Assistant — quick help with orders, returns, delivery, products, and store information."
+    />
+    <title>RetailCare Assistant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="info-panel" aria-label="RetailCare service information">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">R</div>
+          <div><strong>RetailCare</strong><span>Customer support</span></div>
+        </div>
+        <div class="intro">
+          <p class="eyebrow">Always here to help</p>
+          <h1>Shopping support, without the waiting.</h1>
+          <p>
+            Get quick answers about orders, returns, delivery, payments,
+            products and store services.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="service-status">
+            <span class="pulse"></span><strong>Assistant online</strong>
+          </div>
+          <p>Average reply time: instantly</p>
+        </div>
+        <div class="topic-list" aria-label="Available support topics">
+          <span>Order trackings</span><span>Returns & refunds</span
+          ><span>Delivery</span><span>Product help</span>
+        </div>
+        <p class="privacy-note">
+          This is a project demonstration. Do not enter real payment or personal
+          information.
+        </p>
+      </aside>
+
+      <section class="chat-panel" aria-label="Customer service chat">
+        <header class="chat-header">
+          <div class="assistant-avatar" aria-hidden="true">RC</div>
+          <div class="assistant-title">
+            <h2>RetailCare Assistant</h2>
+            <p><span></span> Online now.</p>
+          </div>
+          <button
+            class="icon-button"
+            id="resetButton"
+            title="Start a new conversation"
+            aria-label="Start a new conversation"
+          >
+            ↻
+          </button>
+        </header>
+
+        <div
+          class="messages"
+          id="messages"
+          aria-live="polite"
+          aria-label="Conversation"
+        >
+          <div class="date-label">Today</div>
+          <div class="message-row bot">
+            <div class="mini-avatar" aria-hidden="true">RC</div>
+            <div>
+              <div class="bubble">
+                <p>
+                  Hello! I’m the RetailCare Assistant. How can I help with your
+                  shopping today?
+                </p>
+              </div>
+              <span class="time">Now</span>
+            </div>
+          </div>
+          <div class="quick-actions" id="quickActions">
+            <button data-message="Track my order">Where is my order?</button>
+            <button data-message="I want to return an item">
+              Return an item
+            </button>
+            <button data-message="What are your delivery options?">
+              Delivery options
+            </button>
+            <button data-message="What are your store opening hours?">
+              Store hours
+            </button>
+          </div>
+        </div>
+
+        <form class="composer" id="chatForm">
+          <label class="sr-only" for="messageInput">Type your message.</label>
+          <div class="input-wrap">
+            <textarea
+              id="messageInput"
+              rows="1"
+              maxlength="500"
+              placeholder="Type your question..."
+              autocomplete="off"
+            ></textarea>
+            <button class="send-button" type="submit" aria-label="Send message">
+              ➜
+            </button>
+          </div>
+          <p>
+            RetailCare Assistant may make mistakes. Check important information
+            with store staff.
+          </p>
+        </form>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
